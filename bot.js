@@ -56,7 +56,7 @@ const fs = require('fs');
 
 const Client = new Discord.Client({disableEveryone: true});
 
-const prefix = "&";
+const prefix = "#";
 /////////////////////////
 ////////////////////////
 
@@ -331,7 +331,7 @@ function play(guild, song) {
 
 
    client.on("message", message => {
- if (message.content === "&help") {
+ if (message.content === "#موسيقى") {
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(`
@@ -362,7 +362,7 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
  client.on('ready', function(){	
     var ms = 10000 ;	
-    var setGame = ['&help'];	
+    var setGame = ['#help'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	

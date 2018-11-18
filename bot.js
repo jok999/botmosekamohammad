@@ -387,6 +387,65 @@ j = 1;
 
 
 
+        client.on('message', message => {
+          var prefix = '#';
+          if (message.content.startsWith(prefix + 'help')) {
+      let embed = new Discord.RichEmbed()
+
+      .addField('#موسيقى' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
+      .addField('#inv' ,'     :envelope_with_arrow: اضافة البوت الى سيرفرك :envelope_with_arrow: ')
+      .setColor('RANDOM')
+      .setTitle('═════ஜ۩۞۩ஜ══════════ஜ۩۞۩ஜ═════')
+      message.channel.send(embed)
+      }
+  });
+
+
+
+
+
+
+ client.on('message' , message => {
+
+    if (message.content === "#inv") {
+	    message.reply(`تم ارساله الرابط في الخاص`) 
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)     
+ .setDescription("Add me" + `
+ **
+رابط البوت |
+https://is.gd/WZ0Pk5
+ **
+`);
+  message.author.sendEmbed(embed);
+   }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
